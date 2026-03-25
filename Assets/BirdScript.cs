@@ -8,10 +8,17 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicManagerScript logic;
     public bool birdIsAlive = true;
+    public Sprite[] skins;
+    private SpriteRenderer sr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
+        int selected = PlayerPrefs.GetInt("SelectedCharacter", 0);
+        Debug.Log("Selected index: " + selected);
+        sr.sprite = skins[selected];
+        
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManagerScript>();
     }
 

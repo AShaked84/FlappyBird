@@ -3,7 +3,7 @@ using UnityEngine;
 public class SelectCharacter : MonoBehaviour
 {
     public GameObject[] Characters;
-    private int Number;
+    public int Number;
 
     public void ChangeCharacter(int Num)
     {
@@ -25,5 +25,12 @@ public class SelectCharacter : MonoBehaviour
         }
 
         Characters[Number].SetActive(true);
+    }
+
+    public void SelectedCharacter()
+    {
+        PlayerPrefs.SetInt("SelectedCharacter", Number);
+        PlayerPrefs.Save();
+        Debug.Log("Saved character index: " + Number);
     }
 }
