@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 57327033}
   - component: {fileID: 57327032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pipe Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 15
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -579,7 +579,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
+      minColor: {r: 0.3921569, g: 0.5843138, b: 0.9294118, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
